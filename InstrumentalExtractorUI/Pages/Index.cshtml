@@ -1,0 +1,17 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Instrumental Extractor";
+}
+
+<h1>Upload Your Audio File</h1>
+
+<form method="post" enctype="multipart/form-data">
+    <input type="file" name="audioFile" />
+    <button type="submit">Upload & Process</button>
+</form>
+
+@if (ViewData["Message"] != null)
+{
+    <p>@ViewData["Message"]</p>
+}
